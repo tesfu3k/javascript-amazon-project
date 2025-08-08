@@ -15,17 +15,13 @@ products.forEach((products) => {
           </div>
 
           <div class="product-rating-container" bis_skin_checked="1">
-            <img class="product-rating-stars" src="images/ratings/rating-${
-              products.rating.stars * 10
-            }.png">
+            <img class="product-rating-stars" src="${products.getStarsUrl()}">
             <div class="product-rating-count link-primary" bis_skin_checked="1">${
               products.rating.count
             }</div>
           </div>
 
-          <div class="product-price" bis_skin_checked="1">$${formatCurrency(
-            products.priceCents
-          )}</div>
+          <div class="product-price" bis_skin_checked="1">${products.getPrice()}</div>
 
           <div class="product-quantity-container" bis_skin_checked="1">
             <select>
