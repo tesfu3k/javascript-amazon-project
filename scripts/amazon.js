@@ -37,7 +37,7 @@ products.forEach((products) => {
               <option value="10">10</option>
             </select>
           </div>
-
+            ${products.extraInfoHTML()}
           <div class="product-spacer" bis_skin_checked="1"></div>
 
           <div class="added-to-cart" bis_skin_checked="1">
