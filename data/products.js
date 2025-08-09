@@ -51,9 +51,38 @@ class Clothing extends Product {
   }
 }
 
-console.log(tshirt);
-console.log(tshirt.getPrice());
-console.log(tshirt.getStarsUrl());
+/*
+const date = new Date();
+console.log(date);
+console.log(date.toLocaleTimeString());
+console.log(date.toLocaleDateString());
+*/
+
+/*
+console.log(this);
+
+const object2 = {
+  a: 2,
+  b: this.a,
+};
+*/
+/*
+function logThis() {
+  console.log(this);
+}
+
+logThis();
+logThis.call("hello");
+
+this;
+const object3 = {
+  method: () => {
+    console.log(this);
+  },
+};
+
+object3.method();
+*/
 
 export const products = [
   {
