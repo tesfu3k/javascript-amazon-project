@@ -7,24 +7,24 @@ loadProducts(renderProductsGrid);
 function renderProductsGrid() {
   let productsHTML = "";
 
-  products.forEach((products) => {
+  products.forEach((product) => {
     productsHTML += `<div class="product-container" bis_skin_checked="1">
           <div class="product-image-container" bis_skin_checked="1">
-            <img class="product-image" src="${products.image}">
+            <img class="product-image" src="${product.image}">
           </div>
 
           <div class="product-name limit-text-to-2-lines" bis_skin_checked="1">
-            ${products.name}
+            ${product.name}
           </div>
 
           <div class="product-rating-container" bis_skin_checked="1">
-            <img class="product-rating-stars" src="${products.getStarsUrl()}">
+            <img class="product-rating-stars" src="${product.getStarsUrl()}">
             <div class="product-rating-count link-primary" bis_skin_checked="1">${
-              products.rating.count
+              product.rating.count
             }</div>
           </div>
 
-          <div class="product-price" bis_skin_checked="1">${products.getPrice()}</div>
+          <div class="product-price" bis_skin_checked="1">${product.getPrice()}</div>
 
           <div class="product-quantity-container" bis_skin_checked="1">
             <select>
@@ -40,7 +40,7 @@ function renderProductsGrid() {
               <option value="10">10</option>
             </select>
           </div>
-            ${products.extraInfoHTML()}
+            ${product.extraInfoHTML()}
           <div class="product-spacer" bis_skin_checked="1"></div>
 
           <div class="added-to-cart" bis_skin_checked="1">
@@ -49,7 +49,7 @@ function renderProductsGrid() {
           </div>
 
           <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${
-            products.id
+            product.id
           }">Add to Cart</button>
         </div>`;
   });
